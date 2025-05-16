@@ -9,11 +9,11 @@ keywords = ["flatbuffers", "serialization", "owned"]
 categories = ["data-structures", "memory-management"]
 version = "0.3.0"
 readme = "README.md"
-edition = "2018"
+edition = "2024"
 
 [dependencies]
-flatbuffers = "24"
-paste = "1.0.14"
+flatbuffers = "25"
+paste = "1.0.15"
 
 [lib]
 doctest = false

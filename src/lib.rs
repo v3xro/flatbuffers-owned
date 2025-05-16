@@ -101,7 +101,9 @@ pub trait RelaxedFollowTrait {
     /// This function lacks verification. This method could yield a FlatBuffer with undefined behavior on field reads when corrupted FlatBuffer bytes are passed.
     #[inline(always)]
     unsafe fn follow(buf: &[u8], loc: usize) -> <<Self as RelaxedFollowTrait>::Inner<'_> as Follow<'_>>::Inner {
-        <ForwardsUOffset<Self::Inner<'_>>>::follow(buf, loc)
+        unsafe {
+            <ForwardsUOffset<Self::Inner<'_>>>::follow(buf, loc)
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-#[allow(dead_code, unused_imports)]
+#[allow(dead_code, unused_imports, unsafe_op_in_unsafe_fn)]
 pub mod generated_fbs {
     pub mod foo;
 }
